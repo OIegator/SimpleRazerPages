@@ -81,24 +81,24 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a class="active" href="index.html">Home</a></li>
-                        <li><a href="about-us.html">About us</a></li>
-                        <li><a href="services.html">Our Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="features.html">Features</a></li>
-                        <li><a href="testimonials.html">Testimonials</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a class="@ViewData["index-class"]" asp-area="" asp-page="/Index">Home</a></li>
+                        <li><a class="@ViewData["about-class"]" asp-area="" asp-page="/About-us">About us</a></li>
+                        <li><a class="@ViewData["service-class"]" asp-area="" asp-page="/Services">Our Services</a></li>
+                        <li><a class="@ViewData["partfolio-class"]" asp-area="" asp-page="/Portfolio">Portfolio</a></li>
+                        <li><a class="@ViewData["features-class"]" asp-area="" asp-page="/Features">Features</a></li>
+                        <li><a class="@ViewData["testimonials-class"]" asp-area="" asp-page="/Testimonials">Testimonials</a></li>
+                        <li><a class="@ViewData["pricing-class"]" asp-area="" asp-page="/Pricing">Pricing</a></li>
+                        <li><a class="@ViewData["contact-class"]" asp-area="" asp-page="/Contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+
+    <main role="main" class="">
+        @RenderBody()
+    </main>
+
 
     <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('uploads/parallax_03.jpg');">
         <div class="container">

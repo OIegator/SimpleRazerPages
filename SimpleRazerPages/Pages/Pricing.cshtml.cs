@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace SimpleRazerPages.Pages
 {
-    public class PricingcshtmlModel : PageModel
+    public class PricingModel : PageModel
     {
         public void OnGet()
         {
