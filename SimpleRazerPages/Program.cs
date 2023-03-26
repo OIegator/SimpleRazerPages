@@ -1,3 +1,5 @@
+using SimpleRazerPages.Services;
+
 namespace SimpleRazerPages
 {
     public class Program
@@ -6,8 +8,11 @@ namespace SimpleRazerPages
         {
             var builder = WebApplication.CreateBuilder(args);
 
+
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddTransient<IDataReader, DataReader>();
+           // builder.Services.Add<IDataReader, IDataReader>();
 
             var app = builder.Build();
 

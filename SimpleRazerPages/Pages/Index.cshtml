@@ -1,7 +1,8 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = @Model.data["title"].ToString();
+    ViewData["nav-name"] = @Model.data["nav-name"].ToString();
     ViewData["index-class"] = "active";
     ViewData["about-class"] = "";
     ViewData["service-class"] = "";

@@ -1,0 +1,17 @@
+{
+  "pages": {
+    "index": {
+      "title": "GoodWEB Solutions - Responsive HTML5 Landing Page Template",
+      "nav-name":  "Home"
+    },
+    "testimonials": {
+      "title": "GoodWEB Solutions - Responsive HTML5 Landing Page Template",
+      "nav-name": "Testimonials",
+      "items": [
+        {
+          "desc-title": "Wonderful Support"
+        }
+      ]
+    }
+  }
+}
