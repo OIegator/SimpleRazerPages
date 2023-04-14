@@ -5,6 +5,7 @@ using CsvHelper;
 using SimpleRazerPages.Services;
 using System.Security.Principal;
 using System.Globalization;
+using SimpleRazerPages.Data;
 
 namespace SimpleRazerPages.Pages
 {
@@ -21,9 +22,11 @@ namespace SimpleRazerPages.Pages
 
 
         private readonly ILogger<IndexModel> _logger;
-        public ContactModel(ILogger<IndexModel> logger, IDataReader reader) : base(reader, "contact")
+        private readonly Context _db;
+        public ContactModel(ILogger<IndexModel> logger, IDataReader reader, Context db) : base(reader, "contact")
         {
             _logger = logger;
+            _db = db;
         }
 
       
@@ -50,6 +53,8 @@ namespace SimpleRazerPages.Pages
             }
             else
             {
+                this._db.Contacts.Add(new Models.Contact { FirstName = Message.First_Name, Email = Message.Email, LastName = Message.Last_Name, Phone = Message.Phone });
+                this._db.SaveChanges();
                 WriteFile("comments.csv", Message);
                 return Content($@"<fieldset>
                         <div id='success_page'> 
